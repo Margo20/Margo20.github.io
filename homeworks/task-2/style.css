@@ -2,21 +2,26 @@
 html, body{
 	margin: 0;
 }
+
 body{
 	font-family: sans-serif;
 }
+
 header{
 	background: #1a1a1a;
 	padding: 45px 0;
 	border-bottom: 1px solid #ccc;
-	}
+}
+
 .container{
 	max-width: 1200px;
 	margin: 0 auto;
 }
+
 header > .container{
 	font-size: 0;
 }
+
 nav{
 	display: inline-block;
 	width: calc(100% - 137px);
@@ -24,62 +29,77 @@ nav{
 	font-size: 16px;
 	vertical-align: middle;
 }
+
 .img{
 	width:137px;
 	display: inline-block;
 	vertical-align: middle;
 }
+
 img{
 	max-width: 100%;
 }
+
 .parent_of_list_nav:li{
 	display: inline-block;	
 }
+
 ul{ margin: 0;
 	padding: 0;
 	list-style: none;
 }
+
 nav li{
 	display: inline-block;
 	margin: 0 30px 0 0;
 }
+
 a{
 	color:#fff;
 	text-decoration: none;	
 	padding: 0 0 20px;
 }
+
 a:hover{
   	color: #59cc99;
   	border-bottom: 1px solid #59cc99;
 }
+
 section {
  	padding: 60px 0 40px 0;
 }
+
 p{
 	line-height: 2;
 }
+
 .one{
 	text-align: center;
 	color:#fff;
 	background: #1a1a1a;
 	padding: 140px 0;
 }
+
 strong{
 	color:#59cc99;
 }
+
 .two{
 	text-align: center;
 	color:#000;
 }
+
 .parent_of_list_flex{
   	display: flex;
   	flex-wrap: wrap;
 	margin: 50px -10px 0 -10px;
 }
+
 .children_of_list_flex {
 	flex-basis: 33.3333%;
 	padding: 5px 15px;
 }
+
 .children_of_list_flex > div{
 	text-align: center;
 	font-size: 15px;
@@ -87,48 +107,60 @@ strong{
 	padding: 25px 10px 10px;
 	height: 100%;
 }
+
 .children_of_list_flex:nth-child(3)~.children_of_list_flex{
 	margin-top: 20px ;
 }
+
 .children_of_list_flex:hover >div{
  	border: 1px solid #59cc99;
 }
+
 .children_of_list_flex:hover h3{
  	color: #59cc99;
 }
+
 .three{
 	text-align: center;
 	color:#000;
  }
+
 .parent_of_list_float{
 	margin: 50px -10px 0 -10px;
 }
+
 .parent_of_list_float >.children_of_list_float{
 	float: left; 
 	width: 25%;
 	padding: 0 10px;
 }
+
 .parent_of_list_float::after {
 	content:'';
 	display: block;
 	clear: both;
 }
+
 .f{
 	margin: 0;
 }
+
 .f>figcaption {
   	background-color:#484848;
 	color: #fff;
 	text-align: center;
 	padding: 5px 0;
 }
+
 .for_img{
 	background-color:#ccc;
 	padding: 10px 10px 15px;
 }
+
 h4{
 	margin: 5px;
 }
+
 figcaption>p{
 	line-height: 0;
 }
@@ -138,6 +170,42 @@ footer{
 	text-align: center;
 	color:#fff;
 	padding: 10px 0 10px 0;
+}
+
+@media screen and (max-width: 992px){
+.children_of_list_flex {
+	flex-basis: 50%;
+}
+
+.children_of_list_flex:nth-child(2)~.children_of_list_flex {
+    margin-top: 20px;
+}
+
+.parent_of_list_float >.children_of_list_float {
+	width: 50%;
+}
+
+.children_of_list_float:nth-child(2)~.children_of_list_float {
+	margin-top: 30px;
+}
+}
+
+@media screen and (max-width: 740px){
+	.children_of_list_flex {
+		flex-basis: 100%;
+	}
+
+	.children_of_list_flex:nth-child(1)~.children_of_list_flex {
+		margin-top: 20px;
+	}
+	
+	.parent_of_list_float >.children_of_list_float {
+		width: 100%;
+	}
+	
+	.children_of_list_float:nth-child(1)~.children_of_list_float {
+		margin-top: 30px;
+	}
 }
 
 
